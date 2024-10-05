@@ -6,6 +6,7 @@
     <title>Mundo Aquático</title>
     <!-- Css -->
     <link rel="stylesheet" href="index.css">
+    <!-- Script -->
 
     <!-- Animate.Css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +19,27 @@
     <section class="info">
         <button id="expandButtonInfo" class="expand-info"><i class="fa-solid fa-arrow-down"></i></button>
         <div id='infoDisplay' class="info-display">
-
+            <div class="infoDisplayFlex">
+                <div>
+                    <div onclick="openPage('teste')"></div>
+                    <p>Teste</p>
+                </div>
+                <span></span>
+                <div>
+                    <div onclick="openPage('teste1')"></div>
+                    <p>Teste</p>
+                </div>
+                <span></span>
+                <div>
+                    <div onclick="openPage('teste2')"></div>
+                    <p>Teste</p>
+                </div>
+                <span></span>
+                <div>
+                    <div onclick="openPage('teste3')"></div>
+                    <p>Teste</p>
+                </div>
+            </div>
         </div>
     </section>
     <section id="canvas" class="canvas">
@@ -54,7 +75,7 @@
             gl_FragColor = vec4( glow, 1.0 );
         }
     </script>
+    <script src="./js/infoDisplay.js"></script>
     <script src="./js/renderer.js" type="module"></script>
-    <script src="./js/infoDisplay.js" type="module"></script>
 </body>
 </html>
