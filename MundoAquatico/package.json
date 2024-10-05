@@ -1,0 +1,22 @@
+{
+  "name": "mundoaquatico",
+  "version": "1.0.0",
+  "description": "Nasa SpaceApps 2024",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "gangue do zeka urubu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
