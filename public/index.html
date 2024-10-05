@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo Aquático</title>
+    <!-- Css -->
     <link rel="stylesheet" href="index.css">
+
+    <!-- Animate.Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <section class="info">
+        <button id="expandButtonInfo" class="expand-info">Informções</button>
+        <div id="infoDisplay" class="info-display">
+
+        </div>
+    </section>
     <script type="importmap">
         {
             "imports": {
@@ -38,5 +48,6 @@
         }
     </script>
     <script src="js/renderer.js" type="module"></script>
+    <script src="js/infoDisplay.js" type="module"></script>
 </body>
 </html>

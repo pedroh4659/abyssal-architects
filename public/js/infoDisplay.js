@@ -123,29 +123,7 @@ hemiLight.color.setHSL( 0.6, 1, 0.6 );
 hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
 hemiLight.position.set( 0, 0, 0 );
 
-let skyBoxMaterialArray = [];
-let texture_ft = textureLoader.load( '../three/textures/skybox/front.png');
-let texture_bk = textureLoader.load( '../three/textures/skybox/back.png');
-let texture_up = textureLoader.load( '../three/textures/skybox/top.png');
-let texture_dn = textureLoader.load( '../three/textures/skybox/bot.png');
-let texture_rt = textureLoader.load( '../three/textures/skybox/right.png');
-let texture_lf = textureLoader.load( '../three/textures/skybox/left.png');
-  
-skyBoxMaterialArray.push(new THREE.MeshBasicMaterial( { map: texture_bk }));
-skyBoxMaterialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
-skyBoxMaterialArray.push(new THREE.MeshBasicMaterial( { map: texture_up }));
-skyBoxMaterialArray.push(new THREE.MeshBasicMaterial( { map: texture_dn }));
-skyBoxMaterialArray.push(new THREE.MeshBasicMaterial( { map: texture_rt }));
-skyBoxMaterialArray.push(new THREE.MeshBasicMaterial( { map: texture_lf }));
 
-for (let i = 0; i < 6; i++) {
-  skyBoxMaterialArray[i].side = THREE.BackSide;
-}
-
-skyboxGeo = new THREE.BoxGeometry(  70000, 70000, 70000);
-skybox = new THREE.Mesh( skyboxGeo, skyBoxMaterialArray );
-scene.add( skybox );
-skybox.position.set(0,0,0)
 // moon.rotation.x = 3.1415*0.02;
 // moon.rotation.y = 3.1415*1.54;
 
