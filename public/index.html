@@ -9,13 +9,22 @@
 
     <!-- Animate.Css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/animate.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <section class="info">
         <button id="expandButtonInfo" class="expand-info">Informções</button>
-        <div id="infoDisplay" class="info-display">
-
+        <div id='infoDisplay' class="info-display">
+            <div class="display">
+                <div id="infoDisplayCanvas"></div>
+            </div>
         </div>
+    </section>
+    <section id="canvas" class="canvas">
+
     </section>
     <script type="importmap">
         {
@@ -47,7 +56,7 @@
             gl_FragColor = vec4( glow, 1.0 );
         }
     </script>
-    <script src="js/renderer.js" type="module"></script>
-    <script src="js/infoDisplay.js" type="module"></script>
+    <script src="./js/renderer.js" type="module"></script>
+    <script src="./js/infoDisplay.js" type="module"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ import { Lensflare, LensflareElement } from '../three/objects/Lensflare.js';
 
 let hemiLight, skyboxGeo, skybox, clouds, waterworldmesh,sun,date
 let orbitRadius = 12000
+let canvas = document.getElementById('canvas')
 
 var scene = new THREE.Scene();
 var textureLoader = new THREE.TextureLoader();
@@ -21,7 +22,7 @@ controls.update();
 
 
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+canvas.appendChild( renderer.domElement );
 
 // WaterWorld
 var waterWorldGeometry = new THREE.SphereGeometry( 30,60,60 );

@@ -4,3 +4,26 @@ html,body{
     height: 100%;
     width: 100%;
 }
+.canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+}
+.expand-info{
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%)
+}
+.info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.info-display{
+    background: #0f0f0f;
+    display: none;
+}
