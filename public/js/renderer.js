@@ -1,22 +1,19 @@
 import * as THREE from 'three';
 import { OrbitControls } from '../three/controls/OrbitControls.js';
-import { Lensflare, LensflareElement } from '../three/objects/Lensflare.js';
 
-let hemiLight, skyboxGeo, skybox, clouds, waterworldmesh,sun,date
-let orbitRadius = 12000
+let hemiLight, skyboxGeo, skybox, clouds, waterworldmesh,sun
 let canvas = document.getElementById('canvas')
 
 var scene = new THREE.Scene();
 var textureLoader = new THREE.TextureLoader();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 70000 );
-camera.position.z = 10;
 
 var renderer = new THREE.WebGLRenderer();
 
 var controls = new OrbitControls( camera, renderer.domElement );
 controls.enablePan = true;
-controls.target.set(0, 0, 12000);
-controls.minDistance = 100;
+camera.position.set(0,100,100)
+controls.minDistance = 30;
 controls.maxDistance = 300;
 controls.update();
 
@@ -76,53 +73,54 @@ const waterworld = new THREE.Group();
 waterworld.add(waterworldmesh)
 waterworld.add(clouds)
 waterworld.add(atmosphereGlow)
-waterworld.position.set(0, 0, 12000)
+waterworld.position.set(0, 0, 0)
 scene.add(waterworld)
 
 // Sun
-var sunGeometry = new THREE.SphereGeometry(1000,60,60);
+// var sunGeometry = new THREE.SphereGeometry(1000,60,60);
 
-var sunMaterial = new THREE.MeshBasicMaterial ( 
-  { 
-    map: textureLoader.load('../three/textures/sunmap.jpg'),
-    color: 0xFFA500,
-  } 
+// var sunMaterial = new THREE.MeshBasicMaterial ( 
+//   { 
+//     map: textureLoader.load('../three/textures/sunmap.jpg'),
+//     color: 0xFFA500,
+//   } 
 
-);
+// );
 
-sun = new THREE.Mesh(sunGeometry, sunMaterial)
+// sun = new THREE.Mesh(sunGeometry, sunMaterial)
 
-var sunLight = new THREE.PointLight( 0xffffff, 10000, 15000, 1);
+// var sunLight = new THREE.PointLight( 0xffffff, 10000, 15000, 1);
 
-var sunLightGlow = new THREE.ShaderMaterial( 
-	{
-	    uniforms: 
-		{ 
-			"c":   { type: "f", value: 0.9 },
-			"p":   { type: "f", value: 4.0 },
-			glowColor: { type: "c", value: new THREE.Color(0xFFA500) },
-			viewVector: { type: "v3", value: camera.position }
-		},
-		vertexShader:   document.getElementById( 'vertexShader'   ).textContent,
-		fragmentShader: document.getElementById( 'fragmentShader' ).textContent,
-		side: THREE.BackSide,
-		blending: THREE.AdditiveBlending,
-		transparent: true
-	}   );
-var sunGlowGeometry = new THREE.SphereGeometry(1060, 64, 64)
-var sunGlow = new THREE.Mesh( sunGlowGeometry,sunLightGlow);
+// var sunLightGlow = new THREE.ShaderMaterial( 
+// 	{
+// 	    uniforms: 
+// 		{ 
+// 			"c":   { type: "f", value: 0.9 },
+// 			"p":   { type: "f", value: 4.0 },
+// 			glowColor: { type: "c", value: new THREE.Color(0xFFA500) },
+// 			viewVector: { type: "v3", value: camera.position }
+// 		},
+// 		vertexShader:   document.getElementById( 'vertexShader'   ).textContent,
+// 		fragmentShader: document.getElementById( 'fragmentShader' ).textContent,
+// 		side: THREE.BackSide,
+// 		blending: THREE.AdditiveBlending,
+// 		transparent: true
+// 	}   );
+// var sunGlowGeometry = new THREE.SphereGeometry(1060, 64, 64)
+// var sunGlow = new THREE.Mesh( sunGlowGeometry,sunLightGlow);
 
-const sunGroup = new THREE.Group();
-sunGroup.add(sunGlow)
-sunGroup.add(sunLight)
-sunGroup.add(sun)
-sunGroup.position.set(0, 1000, 0)
-scene.add(sunGroup)
+// const sunGroup = new THREE.Group();
+// sunGroup.add(sunGlow)
+// sunGroup.add(sunLight)
+// sunGroup.add(sun)
+// sunGroup.position.set(0, 1000, 0)
+// scene.add(sunGroup)
 
 hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 1 );
 hemiLight.color.setHSL( 0.6, 1, 0.6 );
 hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
 hemiLight.position.set( 0, 0, 0 );
+scene.add(hemiLight)
 
 let skyBoxMaterialArray = [];
 let texture_ft = textureLoader.load( '../three/textures/skybox/front.png');
@@ -155,19 +153,6 @@ function animate() {
 	requestAnimationFrame( animate );
   waterworldmesh.rotation.y += -0.000090;
   waterworldmesh.rotation.x += -0.000090;
-  date = Date.now() * 0.0001;
-  waterworld.position.set(
-    Math.cos(date) * orbitRadius,
-    0,
-    Math.sin(date) * orbitRadius
-  );
-  let waterworldPosition = {
-    x: waterworld.position.x,
-    y: waterworld.position.y,
-    z: waterworld.position.z
-  }
-  camera.position.set(waterworldPosition.x,waterworldPosition.y,waterworldPosition.z-100)
-  camera.lookAt(waterworld.position)
   clouds.rotateY(0.00020)
 	renderer.render( scene, camera );
 }
