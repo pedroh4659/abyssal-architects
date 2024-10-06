@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<section class="articles"> 
+
 <div class="swiper mySwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
@@ -23,11 +23,11 @@
             <img src="../img/sulfobolus bolinae.jpeg" alt="sulfobolus" />
           </figure>
           <div class="article-body">
-            <h2><i>Sulfolobus bolinea</i></h2>
+            <h2><i>Monera</i></h2>
             <p>
-              urabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+              Os seres mais primitivos, mas os mais bem adaptados do planeta, seu surgimento data aproximadamente 1.36 bilhões de anos após o surgimento do planeta, são a forma de vida mais abundante.
             </p>
-            <a href="#" class="read-more">
+            <a href="monera.html" class="read-more">
               Read more <span class="sr-only">about this is some title</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -146,18 +146,19 @@
 
   
     
-      
-      
-  </section> 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
       var swiper = new Swiper(".mySwiper", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
       });
     </script>
