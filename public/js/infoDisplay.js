@@ -16,3 +16,7 @@ expandButtonInfo.addEventListener("click", function (e) {
     });
   }
 });
+
+function openPage(page) {
+  window.location.href = `/timeline/${page}`;
+}
