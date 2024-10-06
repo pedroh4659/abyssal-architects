@@ -8,56 +8,83 @@
 <link rel="stylesheet" href="../css/monera.css"> 
 </head>
 <body>
-<div class="page-wrapper">
-    <div class="content-wrapper">
-        <input type="radio" name="toggle" id="toggle1" checked>
-        <input type="radio" name="toggle" id="toggle2">
-        <input type="radio" name="toggle" id="toggle3">
-        <input type="radio" name="toggle" id="toggle4">
+   <button>
+    <a href="biosfera.html" id="voltar">Voltar</a>
+   </button> 
 
-        <section id="section-1">
-        <div class="image-container">
-            <img src="../img/sulfobolus bolinae.jpeg" alt="bolinae">
-        </div>
-        <div class="info-container">
-            <h1><i>Sulfolobus bolinea</i></h1>
-            <p class="paragrafo">
-            São as bactérias mais presentes no planeta, realizam a redução do Sulfato de Hidrogênio, são muito ativas em respiradouros vulcânicos. Sua rápida reprodução torna esses organismos os mais importantes desse planeta.
-            </p>
-            <label for="toggle2">Próximo</label>
-            <br>
-        </div>
-        </section>
 
-        <section id="section-2">
-        <div class="image-container">
-            <img src="https://unsplash.it/500/600?image=868" alt="">
-        </div>
-        <div class="info-container">
-            <h1><i>Nitrosomona tobiaes</i></h1>
-            <p class="paragrafo">
-            Bactérias que realizam a redução de amônia. São mais presentes na superfície da água, onde existe uma maior concentração de amônia. Também, para habitar na superfície, elas se adaptaram para resistir a radiação.
-            </p>
-            <label for="toggle3">Próximo</label>
-            <br>
-        </div>
-        </section>
 
-        <!-- Nova seção adicionada -->
-        <section id="section-3">
-        <div class="image-container">
-            <img src="../img/your-image.jpeg" alt="nova-imagem">
-        </div>
-        <div class="info-container">
-            <h1><i>Nome da Bactéria Nova</i></h1>
-            <p class="paragrafo">
-            Descrição da nova bactéria. Detalhes sobre a sua função e características únicas.
-            </p>
-            <label for="toggle4">Próximo</label>
-            <br>
-        </div>
-        </section>
-    </div>
-</div>
+<header>
+	<div>
+		<h1>Monera</h1>
+		<p> Scroll down</p>
+	</div>
+</header>
+<main>
+	<ul id="cards">
+		<li class="card" id="card_1">
+			<div class="card__content">
+				<div>
+					<h2><i>Sulfolobus bolinae</i></h2>
+					<p>They are the most prevalent bacteria on the planet, performing the reduction of hydrogen sulfate, and are highly active in volcanic vents. Their rapid reproduction makes these organisms the most important on the planet.</p>
+					<p><a href="#top" class="btn btn--accent">Back to the top</a></p>
+				</div>
+				<figure>
+					<img src="../img/sulfobolus bolinae.jpeg" alt="bolinae">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_2">
+			<div class="card__content">
+				<div>
+					<h2><i>Nitrosomona tobiaes</i></h2>
+					<p>Bacteria that perform ammonia reduction are more present on the water’s surface, where there is a higher concentration of ammonia. Additionally, to inhabit the surface, they have adapted to resist radiation.
+
+					</p>
+					<p><a href="#top" class="btn btn--accent">Back to the top</a></p>
+				</div>
+				<figure>
+					<img src="../img/nitrosome tobiaes.webp" alt="tobiaes">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_3">
+			<div class="card__content">
+				<div>
+					<h2><i>Methanococcus zukidae</i></h2>
+					<p>Bacteria that are abundant in the vents consume carbon dioxide.
+                    </p>
+					<p><a href="#top" class="btn btn--accent">Back to the top</a></p>
+				</div>
+				<figure>
+					<img src="../img/Methanococcus zukidae.webp" alt="zukidae">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_4">
+			<div class="card__content">
+				<div>
+					<h2><i>Beggiatoa ursidae</i></h2>
+					<p> Heterotrophic bacteria that prey on other bacteria or infect animals, consuming their flesh, are commonly found in cadavers.
+                    </p>
+					<p><a href="#top" class="btn btn--accent">Back to the top</a></p>
+				</div>
+				<figure>
+					<img src="../img/heterotrofa.jpeg" alt="ursidae">
+				</figure>
+			</div>
+		</li>
+	</ul>
+</main>
+<aside>
+	<p>The Monera Kingdom showcases a variety of both autotrophic and heterotrophic organisms. Autotrophic and anaerobic organisms are the only producers on the planet, serving as food for other unicellular and multicellular heterotrophs. They also have mutualistic relationships with coral and fish species. The chemosynthesis processes of all species are very similar, with the differentiating factor being the compound used in their chemosynthesis processes, which include hydrogen sulfate, methane, and ammonia. As for heterotrophic bacteria, they are responsible for recycling the organic matter of dead organisms, consuming the remains of other creatures, as well as other bacteria.
+	</p>
+</aside>
+
+<script>
+    import { showDialog } from 'https://codepen.io/bramus/pen/ZEqMOLz/cccfe67c2b9cdfbeb5fb59083dbd0a64.js';
+showDialog('https://scroll-driven-animations.style/demos/stacking-cards/css/');
+</script>
+
 </body>
 </html>
