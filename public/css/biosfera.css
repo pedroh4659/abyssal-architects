@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
-/*usando*/
->>>>>>> d82fc2b1aed41b154ab96f77a5b548b51fa1230d
+*usando*/
 article {
   --img-scale: 1.001;
   --title-color: black;
@@ -89,32 +85,12 @@ article:has(:hover, :focus) {
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-body {
-  margin: 0;
-  padding: 48px 0;
-  font-family: "Figtree", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  background-image: linear-gradient(45deg, #7c9885, #b5b682);
-  min-height: 100vh;
-}
-
-.articles {
-  display: grid;
-  max-width: 50%;
-  margin-inline: auto;
-  padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-=======
 /* basic article elements styling */
 figure {
   margin: 10;
   padding: 0;
   aspect-ratio: 16 / 9;
   overflow: hidden;
->>>>>>> d82fc2b1aed41b154ab96f77a5b548b51fa1230d
 }
 
 @media screen and (max-width: 960px) {
@@ -155,9 +131,7 @@ figure {
   position: absolute;
   white-space: nowrap; 
   width: 1px;
-} 
-
-
+}
 
 /*Carrossel a partir daqui */
 
