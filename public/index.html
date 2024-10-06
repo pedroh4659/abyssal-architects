@@ -14,30 +14,60 @@
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Fount -->
+    <link rel="stylesheet" href="css/founts.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ibu8huz.css">
 </head>
 <body>
     <section class="info">
         <button id="expandButtonInfo" class="expand-info"><i class="fa-solid fa-arrow-down"></i></button>
+        <div class="card">
+            <div class="swiper cards">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <div id='infoDisplay' class="info-display">
             <div class="infoDisplayFlex">
                 <div>
                     <div onclick="openPage('teste')"></div>
-                    <p>Teste</p>
+                    <p class="Brother-1816-Regular">Teste</p>
                 </div>
                 <span></span>
                 <div>
                     <div onclick="openPage('teste1')"></div>
-                    <p>Teste</p>
+                    <p class="Brother-1816-Regular">Teste</p>
                 </div>
                 <span></span>
                 <div>
                     <div onclick="openPage('teste2')"></div>
-                    <p>Teste</p>
+                    <p class="Brother-1816-Regular">Teste</p>
                 </div>
                 <span></span>
                 <div>
                     <div onclick="openPage('teste3')"></div>
-                    <p>Teste</p>
+                    <p class="Brother-1816-Regular">Teste</p>
                 </div>
             </div>
         </div>
