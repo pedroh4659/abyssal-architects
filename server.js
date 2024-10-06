@@ -1,7 +1,10 @@
 const express = require('express')
 require('dotenv').config()
-
+var favicon = require('serve-favicon')
+var path = require('path')
 const app = express()
+app.use(favicon(path.join(__dirname, 'logo.png')))
+
 const port = process.env.PORT
 
 app.use(express.static('public'));

@@ -1,0 +1,330 @@
+*{margin: 0;}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+
+section {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: blue;
+}
+.rain-sec{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+.sec2{
+	background: red;
+}
+
+.line{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	position: absolute;
+    top: 250vh;
+    left: 45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+.line div{
+	background: snow;
+	height: 7vh;
+	width: 7vh;
+	border-radius: 50%;
+}
+.line span{
+	background: white;
+	width: 1vw;
+	height: 90vh;
+}
+
+.centered-rain{
+	height: auto;
+	width: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.container {
+	width: 50vw; /* Take up 50% of the screen width */
+	height: 100vh;
+	min-width: 300px; /* Adjusted min-width for smaller screens */
+	max-width: 600px;
+	max-height: 500px;
+	display: grid;
+	margin-right: 7vw;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rain {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* Adjust individual rain animations as needed */
+
+.rain:nth-of-type(1) {
+	--duration: 2.7s;
+	--delay: 1s;
+	transform: translate(10%, 10%) scale(0.9);
+}
+
+.rain:nth-of-type(2) {
+	--duration: 2.1s;
+	--delay: 1.2s;
+	transform: translate(-20%, 40%) scale(1.3);
+}
+
+.rain:nth-of-type(3) {
+	--duration: 2.3s;
+	--delay: 2s;
+	transform: translate(0%, 50%) scale(1.1);
+}
+
+.rain:nth-of-type(4) {
+	--duration: 2s;
+	--delay: 4s;
+	transform: translate(0%, -10%) scale(1.2);
+}
+
+.rain:nth-of-type(5) {
+	--duration: 2.5s;
+	--delay: 0s;
+	transform: translate(10%, 0%) scale(0.9);
+}
+
+.rain:nth-of-type(6) {
+	--duration: 2s;
+	--delay: 2.7s;
+	transform: translate(-20%, 0%) scale(1);
+}
+
+.rain:nth-of-type(7) {
+	--duration: 1.8s;
+	--delay: 1.3s;
+	transform: translate(20%, -40%) scale(1.2);
+}
+
+.rain:nth-of-type(8) {
+	--duration: 2.2s;
+	--delay: 0s;
+	transform: translate(20%, 0%) scale(1);
+}
+
+.rain:nth-of-type(9) {
+	--duration: 2s;
+	--delay: 0.5s;
+	transform: translate(0%, -10%) scale(1.3);
+}
+
+.drop {
+	background-color: white;
+	width: 3px;
+	height: 100px;
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 1.5px);
+	animation-name: fall;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+	animation-fill-mode: backwards;
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(-120vh);
+	}
+	45% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	46% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.waves > div {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 50%;
+	border: solid white 3px;
+	animation-name: spread;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+}
+
+.waves > div:nth-child(2) {
+	animation-delay: calc(var(--delay) + 0.3s);
+	animation-timing-function: linear;
+}
+
+@keyframes spread {
+	0% {
+		transform: scale(0);
+		opacity: 1;
+	}
+	40% {
+		transform: scale(0);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+.splash {
+	position: absolute;
+	top: 10%;
+	bottom: 50%;
+	left: 35%;
+	right: 35%;
+	border-radius: 8px;
+	clip-path: polygon(7% 100%, 5% 95%, 3% 80%, 11% 50%, 17% 38%, 23% 44%, 30% 53%, 37% 28%, 40% 29%, 45% 43%, 51% 53%, 59% 36%, 64% 22%, 67% 23%, 70% 34%, 72% 46%, 79% 37%, 83% 37%, 93% 61%, 96% 76%, 96% 94%, 94% 100%);
+	background-color: white;
+	transform-origin: bottom;
+	animation-name: splash;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+	opacity: 0;
+}
+
+@keyframes splash {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	42% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	44% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	48% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.particles > div {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	animation-name: rise;
+	animation-duration: var(--duration);
+	animation-delay: var(--delay);
+	animation-iteration-count: infinite;
+	animation-fill-mode: backwards;
+}
+
+.particles > div:nth-child(1) {
+	top: 50%;
+	left: 45%;
+	animation-timing-function: linear;
+}
+
+.particles > div:nth-child(2) {
+	top: 70%;
+	left: 60%;
+	animation-timing-function: ease-out;
+}
+
+.particles > div:nth-child(3) {
+	top: 50%;
+	left: 65%;
+	animation-timing-function: ease-out;
+}
+
+.particles > div:nth-child(4) {
+	top: 40%;
+	left: 50%;
+	animation-timing-function: linear;
+}
+
+@keyframes rise {
+	0% {
+		transform: translateY(0px);
+		opacity: 0;
+	}
+	43% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+}
+
+.text-container {
+    width: 40vw;
+    color: white;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+    margin-left: auto;
+	margin-left: 7vw;
+}
+
+.text-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.arredondada {
+    border-radius: 50%; 
+    object-fit: cover;
+}
