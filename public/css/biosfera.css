@@ -1,39 +1,15 @@
+/*usando*/
 article {
   --img-scale: 1.001;
   --title-color: black;
   --link-icon-translate: -20px;
   --link-icon-opacity: 0;
-  position: relative;
+  position: static;
   border-radius: 16px;
   box-shadow: none;
   background: #fff;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
-  overflow: hidden;
-}
-
-article a::after {
-  position: absolute;
-  inset-block: 0;
-  inset-inline: 0;
-  cursor: pointer;
-  content: "";
-}
-
-/* basic article elements styling */
-article h2 {
-  margin: 0 0 18px 0;
-  font-family: "Lato", cursive;
-  font-size: 1.9rem;
-  letter-spacing: 0.06em;
-  color: var(--title-color);
-  transition: color 0.3s ease-out;
-}
-
-figure {
-  margin: 0;
-  padding: 0;
-  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -44,8 +20,26 @@ article img {
   transition: transform 0.4s ease-in-out;
 }
 
+article h2 {
+  margin: 0 0 18px 0;
+  font-family: "Lato", cursive;
+  font-size: 1.8em;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+.articles {
+  display: grid;
+  max-width: 20%;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
 .article-body {
-  padding: 24px;
+  padding: 48px;
 }
 
 article a {
@@ -57,6 +51,14 @@ article a {
 
 article a:focus {
   outline: 1px dotted #28666e;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
 }
 
 article a .icon {
@@ -83,23 +85,12 @@ article:has(:hover, :focus) {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 48px 0;
-  font-family: "Figtree", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  background-image: linear-gradient(45deg, #7c9885, #b5b682);
-  min-height: 100vh;
-}
-
-.articles {
-  display: grid;
-  max-width: 20%;
-  margin-inline: auto;
-  padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+/* basic article elements styling */
+figure {
+  margin: 10;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 960px) {
@@ -121,12 +112,12 @@ body {
     padding-left: 0;
   }
   figure {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     overflow: hidden;
   }
   figure img {
-    height: 100%;
+    height: 5%;
     aspect-ratio: 1;
     object-fit: cover;
   }
