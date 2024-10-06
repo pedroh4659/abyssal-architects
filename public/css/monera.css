@@ -77,24 +77,30 @@
 	}
 }
 
-/** DEBUG **/
-
-#debug {
-  position: fixed;
-  top: 1em;
-  left: 1em;
+#voltar{
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background:rgba(255, 255, 255, 0);
+    border-radius: 20%;
+    font-size: 80%;
+    font-size: 150%;
+    
+   
+   
 }
-#debug::after {
-  content: " Show Debug";
-  margin-left: 1.5em;
-  color: white;
-  white-space: nowrap;
-}
 
-#debug:checked ~ main {
-  --outline-width: 1px;
+a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    
+    
 }
-
 
 /** PAGE STYLING **/
 
@@ -105,7 +111,7 @@
 }
 
 body {
-	background: rgb(58 29 43);
+	background-image: url(../img/fundo.jpg);
 	color: rgb(255, 255, 255);
 	text-align: center;
 
@@ -193,7 +199,7 @@ p {
 }
 
 .btn {
-	background: rgb(188 87 36);
+	background: rgb(33, 50, 148);
 	color: rgb(255 255 255);
 	text-decoration: none;
 	display: inline-block;
@@ -202,11 +208,17 @@ p {
 }
 
 aside {
-	width: 50vw;
+	width: 83vw;
 	margin: 0 auto;
 	text-align: left;
+    
 }
 
 aside p {
 	margin-bottom: 1em;
+    background-color: rgba(71, 71, 71, 0.267);
+    padding: 2em;
+    border-radius: 2em;
+    line-height: 158%;
+    text-align: justify;
 }
