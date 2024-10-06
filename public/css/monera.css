@@ -35,18 +35,7 @@
 
 @supports (animation-timeline: works) {
 
-	@scroll-timeline cards-element-scrolls-in-body {
-		source: selector(body);
-		scroll-offsets:
-			/* Start when the start edge touches the top of the scrollport */
-			selector(#cards) start 1,
-			/* End when the start edge touches the start of the scrollport */
-			selector(#cards) start 0
-		;
-		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
-		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
-		time-range: 4s;
-	}
+	
 
 	.card {
 		--index0: calc(var(--index) - 1); /* 0-based index */
