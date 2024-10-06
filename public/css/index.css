@@ -90,37 +90,3 @@ html,body{
     background: #0051FF;
     margin-top: 1.5vh;
 }
-
-.card{
-    position: absolute;
-    bottom: 0vh;
-    height: 75vh;
-    width: 100vw;
-    z-index: 2000;
-    pointer-events: all;
-}
-.swiper {
-    width: 100vw;
-    height: 75vh;
-}
-.swiper-wrapper {
-    margin-left: 0.4vw;
-}
-.swiper-slide {
-    background: snow;
-    margin-top: 5vh;
-    background-position: center;
-    background-size: cover;
-    width: 28vw!important;
-    height: 60vh!important;
-    margin: 5vh;
-    border-radius: 4vh;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 28vw;
-    height: 30vh;
-    border-radius: 4vh 4vh 0vh 0vh;
-    pointer-events: none;
-}
