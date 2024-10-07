@@ -1,0 +1,73 @@
+.navbar{
+    position: absolute;
+    width: 0vw;
+    height: 100vh;
+    background: #0f0f0f;
+    z-index: 100000000;
+    display: flex;
+    transition: 1s;
+}
+.navbar i,h1{
+    pointer-events: none;
+}
+.navbar-abrir-fechar{
+    top: 4vh;
+    left: 3vw;
+    position: absolute;
+    cursor: pointer;
+    float: right;
+}
+.navbar-abrir-fechar i{
+    color: snow;
+    font-size: 4vh;
+    pointer-events: none;
+}
+.navbar-container{
+    position: absolute;
+    left: 3vw;
+    top: 10vh;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: snow;
+}
+.navbar-container h1{
+    margin-left: 1vw;
+    font-size: 3vh;
+}
+.navbar-container i{
+    font-size: 3vh;
+}
+
+.item-navbar{
+    margin-top: 3vh;
+}
+
+
+.home-navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
+
+.adicionar-navbar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.adicionar-navbar hr{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.adicionar-navbar p{
+    margin-top: 0.5vh;
+}
+.adicionar-navbar-label{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
