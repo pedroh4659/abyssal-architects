@@ -42,6 +42,29 @@ article h2 {
   padding: 48px;
 }
 
+#voltar{
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background:rgba(255, 255, 255, 0);
+  border-radius: 20%;
+  font-size: 80%;
+  font-size: 150%;
+  
+}
+
+a{
+  text-decoration: none;
+  font-weight: bolder;
+  color: white;
+  
+  
+}
+
 /*não usando*/
 
 /*article a::after {
