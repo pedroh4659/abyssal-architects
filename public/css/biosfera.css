@@ -1,4 +1,4 @@
-*usando*/
+/*usando*/
 article {
   --img-scale: 1.001;
   --title-color: black;
@@ -7,7 +7,7 @@ article {
   position: static;
   border-radius: 16px;
   box-shadow: none;
-  background: #fff;
+  background-image: #fff;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -42,6 +42,26 @@ article h2 {
   padding: 48px;
 }
 
+/*não usando*/
+
+/*article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}*/
+
+/* basic article elements styling */
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+
 article a {
   display: inline-flex;
   align-items: center;
@@ -51,14 +71,6 @@ article a {
 
 article a:focus {
   outline: 1px dotted #28666e;
-}
-
-article a::after {
-  position: absolute;
-  inset-block: 0;
-  inset-inline: 0;
-  cursor: pointer;
-  content: "";
 }
 
 article a .icon {
@@ -85,12 +97,14 @@ article:has(:hover, :focus) {
   box-sizing: border-box;
 }
 
-/* basic article elements styling */
-figure {
-  margin: 10;
-  padding: 0;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+body {
+  margin: 0;
+  padding: 48px 0;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  background-image: url(../img/fundo.jpg);
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 960px) {
@@ -142,7 +156,7 @@ body {
 }
 
 body {
-  background: #eee;
+  background-image: url(../img/fundo.jpg);
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -152,13 +166,14 @@ body {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  border-radius: 16px;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
