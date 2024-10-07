@@ -7,8 +7,8 @@
 }
 
 #cards {
-	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
-	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); 
+	margin-bottom: var(--card-margin); 
 }
 
 #card_1 {
@@ -38,9 +38,9 @@
 	
 
 	.card {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+		--index0: calc(var(--index) - 1); 
+		--reverse-index: calc(var(--numcards) - var(--index0)); 
+		--reverse-index0: calc(var(--reverse-index) - 1); 
 	}
 	
 	.card__content {
@@ -91,9 +91,9 @@ a{
     
 }
 
-/** PAGE STYLING **/
 
-* { /* Poor Man's Reset */
+
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
