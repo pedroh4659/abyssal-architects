@@ -44,7 +44,15 @@ html,body{
     height: 25vh;
     width: 100vw;
 }
-
+.info-display a{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    font-size: 3vh;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: snow;
+}
 .infoDisplayFlex{
     position: absolute;
     top: 50%;

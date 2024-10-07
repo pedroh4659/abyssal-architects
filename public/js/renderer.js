@@ -13,7 +13,7 @@ var renderer = new THREE.WebGLRenderer();
 var controls = new OrbitControls( camera, renderer.domElement );
 controls.enablePan = true;
 camera.position.set(0,100,100)
-controls.minDistance = 30;
+controls.minDistance = 80;
 controls.maxDistance = 300;
 controls.update();
 
