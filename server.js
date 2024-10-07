@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
 app.get('/biosfera', (req, res) => {
   res.sendFile('html/biosfera.html', { root: path.join(__dirname, '/public') });
 })
+
+var biosfera = require('./routes/biosfera')
+app.use('/biosfera', biosfera);
+
 var timeline = require('./routes/timeline')
 app.use('/timeline', timeline);
 
