@@ -12,17 +12,35 @@ html,body{
     cursor: grab;
 }
 .expand-info{
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, 0%);
     height: 6vh;
     width: 6vh;
     border: none;
     outline: none;
     background: none;
+    position: relative;
     z-index: 1001;
     pointer-events: all;
+}
+.info-expand-div{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 2vh;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+.info-expand-div p{
+    position: relative;
+    margin-bottom: 0.2vh;
+    color: snow;
 }
 .expand-info i {
     font-size: 3vh;
